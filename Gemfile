@@ -14,6 +14,8 @@ gem 'thin'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'attr_encrypted'
 gem 'carrierwave'
+gem 'paperclip'
+gem 'paperclip-compression'
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

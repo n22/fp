@@ -4,6 +4,10 @@
   </div>
   <div class="chatboxmessagecontent">
     <p><%= message.body %></p>
+   <%if message.image_file_name? %>
+    <p><%= image_tag message.image.url(:thumb) %></p>
+    <p><%= link_to "Download",message.image.url(:medium,false),:target => "_blank" %></p>
+    <%end %>
     <time datetime="<%= message.created_at %>" title="<%= message.created_at.strftime("%d %b  %Y at %I:%M%p") %>">
       <%= message_interlocutor(message).name %> • <%= message.created_at.strftime("%H:%M %p") %>
     </time>
